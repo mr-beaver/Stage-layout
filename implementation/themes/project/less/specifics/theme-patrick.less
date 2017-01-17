@@ -1,0 +1,79 @@
+/**
+ * @author: Patrick Zhu
+ * @created: 1/14/2017
+ */
+
+//default stylings for html, body and app region
+html,
+body,
+[region="app"] {
+    height: 100%;
+    padding: 0 !important;
+    position: relative;
+    .container-fluid();
+    .regional-main{
+        height: 100%;
+    }
+}
+
+//-------------------------------- styling for Create context --------------------------------//
+.region-contexts {
+	height: 100%;
+	.context-create {
+		height: 100%;
+		background-color: transparent;
+		position: relative;
+		//layout view
+		.region-layout {
+			height: 100%;
+			width: 100%;
+			.regional-create-layout {
+				position: relative;
+				height: 100%;
+				width: 100%;
+				.layout-switch {
+					position: fixed;
+					top: 0;
+					right: 1px;
+					z-index: 2;
+				}
+				.layouts {
+					height: 100%;
+					width: 100%;
+					border: 1px solid #000;
+					position: relative;
+					z-index: 1;
+					background-color: transparent;
+				}
+				.horizontal-line {
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					height: 1px;
+					border-bottom: 1px solid @border;
+					z-index: -1;
+				}
+				.vertical-line {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					width: 1px;
+					border-right: 1px solid @border;
+					z-index: -1;
+				}
+			}
+		}
+		//hover SVG view
+		.region-hover {
+			height: 100%;
+			width: 100%;
+			.regional-create-hover {
+				position: relative;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+}
